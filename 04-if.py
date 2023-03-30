@@ -25,6 +25,7 @@ def mayor():
     else:
         el_numero_mas_grande = segundo_numero
         orden_numero = "segundo numero"
+        
     if primer_numero == segundo_numero:
         print("Los numeros son iguales")
     else:

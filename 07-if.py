@@ -3,7 +3,9 @@
 def numeros_primos():
     numero = input("Ingrese un numero: ")
     numero = int(numero)
-    if numero < 2:
+    primos = 2
+    numero_primo = numero / primos
+    if numero_primo == 0:
         print("El número no es primo")
     elif numero == 2:
         print("El número es primo")
