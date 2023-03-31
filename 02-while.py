@@ -9,3 +9,5 @@ numero = 1
 while(numero_entero >= numero):
     print(numero)
     numero = numero + 1
+
+
