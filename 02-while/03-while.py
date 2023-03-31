@@ -19,7 +19,7 @@ while (numero_inicial < len(cadena)):
 #     print(cadena[contador]) # cadena[contador] lo que va entre corchetes representa el orden de cada letra 
 #     contador = contador + 1 # sumamos 1 para que cada vuelta se vaya imprimiendo cada letra de la palabra
 
-########################################################
+##########################################################
 # la cantidad de elementos de una lista #
 numeros = [1, 2, 4, 6]
 cantidad_de_elementos_lista = len(numeros)
