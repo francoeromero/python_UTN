@@ -1,5 +1,19 @@
 # Escribir un programa que le pida al usuario que ingrese un número entero, y luego imprima "El número ingresado es par" si el número es divisible por 2, o "El número ingresado es impar" si el número no es divisible por 2.
 
+
+
+numero_texto = input("Ingrese numero: ")
+# VALIDAR
+numero_int = int(numero_texto)
+resto = numero_int % 2
+if resto == 0:
+    print("par")
+else:
+    print("impar")
+
+
+
+
 def numero_par():
     numero = input("Ingrese un numero: ")
     numero = int(numero)
@@ -17,3 +31,4 @@ def numero_impar():
     else:
         print("El numero es par")
 numero_impar()
+
