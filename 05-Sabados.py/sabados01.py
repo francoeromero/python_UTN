@@ -20,6 +20,8 @@ for i in lista_integrantes:
     nombre = input("Ingrese su nombre: ")
     while(not nombre.isalpha()):
         nombre = input("Error! ingrese su nombre: ")
+
+        
     edad_ingresada = input("Ingrese su edad: ")
     edad = int(edad_ingresada)
     while(edad < 17 or edad.isalpha()):
