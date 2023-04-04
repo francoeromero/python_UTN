@@ -49,4 +49,74 @@ else:
 descuento_total = estadia * descuento
 aumento_total = estadia * aumento
 precio_final = estadia - descuento_total + aumento_total
-print("su precio final es : {}".format(precio_final))
+print("su precio final es : {} su descuento es {} y su aumento es {}".format(precio_final, descuento_total, aumento_total))
+
+
+"""
+function mostrar()
+{
+	let precioFinal;
+	let precio = 15000;
+	let porcentaje;
+	let estacion;
+	let destino;
+	let mensaje;
+	estacion = document.getElementById("txtIdEstacion").value;
+	destino = document.getElementById("txtIdDestino").value;
+	switch(estacion)
+	{
+		case "Invierno":
+			switch(destino)
+			{
+				case "Bariloche":
+					porcentaje = 1.2;//20% aumento
+					mensaje = "20% aumento";
+				break;
+				case "Mar del plata":
+					porcentaje = 0.8;// 1 - 0.2 = 0.8
+					mensaje = "20% descuento";
+				break;
+				default:
+					porcentaje = 0.9;//
+					mensaje = "10% descuento";
+				break;
+			}
+		break;
+		case "Verano":
+			switch(destino)
+			{
+				case "Bariloche":
+					porcentaje = 0.8;//
+					mensaje = "20% descuento";
+				break;
+				case "Mar del plata":
+					porcentaje = 1.2;//
+					mensaje = "20% aumento";
+				break;
+				default:
+					porcentaje = 1.1;//
+					mensaje = "10% aumento";
+				break;
+			}
+		break;
+		default:
+			switch(destino)
+			{
+				case "Cataratas":
+				case "Mar del plata":
+				case "Bariloche":
+					porcentaje = 1.1;//
+					mensaje ="10% aumento" ;
+				break;
+				default:
+					porcentaje = 1;// 100 %  
+					mensaje = "sin descuento";
+				break;
+			}
+		break;
+	}
+	precioFinal = precio * porcentaje;
+	alert("El precio es de " + precio + " y tiene un " + mensaje + " " + precioFinal);
+}
+
+"""
