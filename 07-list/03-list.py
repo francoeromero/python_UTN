@@ -2,11 +2,34 @@
 
 lista = []
 
-for i in range(5):
+#iteracion limitada con for
+# for i in range(5):
+#     numero_ingresado = input("Ingrese un numero: ")
+#     numero = int(numero_ingresado)
+#     lista.append(numero)
+# print(lista)
+
+#iteracion infinita con while
+while(True):
     numero_ingresado = input("Ingrese un numero: ")
     numero = int(numero_ingresado)
-    lista.append(numero)
-print(lista)
+    if(numero < 0):
+        break
+    else:
+        lista.append(numero)
+print("lista: ", lista)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
