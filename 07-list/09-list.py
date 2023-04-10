@@ -22,8 +22,9 @@
 
 
 
-lista_palabras = ["medicina", "arquitectura", "abogacia", "ingenieria"]
+lista_palabras = ["medicina", "esdicina", "arquitectura", "abogacia", "ingenieria"]
 n = input("Ingrese palabra: ")
+lista_misma_longitud = []
 bandera = False
 for palabra in lista_palabras:
     if palabra == n:
@@ -31,10 +32,17 @@ for palabra in lista_palabras:
             if lista_palabras[indice] == n:
                 bandera = True
                 break
+
+for i in lista_palabras:
+    if(len(n) == len(i)):
+        lista_misma_longitud.append(i)
+print(lista_misma_longitud)
+
 if bandera == True:
     print("La palabra {0} esta en la lista y esta en el indice {1}".format(n, indice+1))
 else:
     print("La palabra no esta en la lista")
+
 
 
 
