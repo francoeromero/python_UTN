@@ -7,6 +7,7 @@ for palabra in lista_palabras:
         break
     else:
         esta_en_la_lista = False
+    
 
 if(esta_en_la_lista == True):
     print("Esta en la lista")
