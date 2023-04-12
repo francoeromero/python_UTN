@@ -7,3 +7,6 @@ lista_de_compras = {
     "alfajores" : 3
 }
 
+for i in lista_de_compras:
+    print(i)
+    print(lista_de_compras[i])
