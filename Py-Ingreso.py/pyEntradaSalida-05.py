@@ -1,3 +1,8 @@
+def suma(a,b):
+    resultado = a + b
+    print(resultado)
+suma(1,2)
+
 def sumar():
     print("Suma")
     # pido un numero y almaceno a una variable
