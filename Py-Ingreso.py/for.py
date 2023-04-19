@@ -26,7 +26,7 @@
 listaa = [1, 32, 22, 12]
 numero_buscado = input("ingrese unnumero a buscar: ")
 numero_buscado = int(numero_buscado)
-# indice = 1
+indice = 1
 
 for i in range(len(listaa)):
     if(listaa[i] == numero_buscado):
