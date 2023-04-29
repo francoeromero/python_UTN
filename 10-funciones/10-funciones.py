@@ -2,11 +2,9 @@
 
 palabras = [ "elefante", "colibri", "tigre", "camello"]
 
-def palabra_mas_largo(lista_palabras):
-    bandera = 0
-    for i in palabras:
-        if(len(i) > len(max_letras) | bandera == 0):
-            max_letras = i 
-            bandera = 1
-    return max_letras
-print(palabra_mas_largo(palabras))
+def palabra_mas_larga(lista_palabras):
+    palabra_mas_larga = ''
+    for palabra in lista_palabras:
+        if len(palabra) > len(palabra_mas_larga):
+            palabra_mas_larga = palabra
+    return palabra_mas_larga
