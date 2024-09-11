@@ -50,6 +50,9 @@ def sort_array(array:list,order:bool)->int:
                     array[i] = array[j]
                     array[j] = aux
     return change_counter
+
+sort_array([5, 3, 1, 7, 9],True)
+
 '''
  2- Realizar una función que ordene una lista de nombres de la A-Z o viceversa
  dependiendo de un parámetro que se le envíe, la función debe retornar la cantidad
