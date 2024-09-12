@@ -1,4 +1,43 @@
 '''
+
+
+1. Realizar una función recursiva que calcule la suma de los primeros números naturales:
+
+'''
+def sumar_naturales(num:int)->int:
+    if num == 0:
+        reply = 0
+    else:
+        reply = num + sumar_naturales(num-1)
+    return reply
+
+'''
+2. Realizar una función recursiva que calcule la potencia de un número:
+'''
+
+def calcular_potencia(base:int, exponente:int)->int:
+    if exponente == 0:
+        reply = 1
+    else:
+        reply = base * calcular_potencia(base, exponente-1)
+    return reply 
+
+'''
+3. Realizar una función para calcular el número de Fibonacci (investigar que es) de un número ingresado por consola. La función deberá seguir el siguiente prototipo:
+'''
+
+def calcular_fibonacci(num:int)->int:
+    if num == 0:
+        reply = 0
+        return reply
+    elif num == 1:
+        reply = 1
+        return reply
+    else:
+        reply = calcular_fibonacci(num - 1) + calcular_fibonacci(num - 2)
+        return reply
+    
+'''
 Ejercitación Clase 5 (Funciones Avanzado)
 
 
