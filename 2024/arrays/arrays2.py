@@ -81,14 +81,14 @@ def organize_last_names(array_last_names:list):
 (Hacer dos funciones, una para la carga de productos y otra para mostrarlos)
 
 '''
-def validate_age(message:str, message_bug:str, min:int, max:int):
+def validate_integer(message:str, message_bug:str, min:int, max:int):
     age = input(message)
     while age.isalpha() or int(age) < min or int(age) > max:
         age = input(message_bug)
     age = int(age)
     return age  
 
-def validate_name(message:str, message_bug:str):
+def validate_string(message:str, message_bug:str):
     name = input(message)
     while name.isdigit() :
         name = input(message_bug)
@@ -98,8 +98,8 @@ def load_data():
     array = []
     for i in range(0,5,1):
         sub_array = []
-        person = validate_name('Enter the name: ', 'Enter correctly name: ')
-        age = validate_age('Enter the age: ', 'Enter correctly age: ', 0, 100)
+        person = validate_string('Enter the name: ', 'Enter correctly name: ')
+        age = validate_integer('Enter the age: ', 'Enter correctly age: ', 0, 100)
         sub_array.append(person)
         sub_array.append(age)
         array.append(sub_array)
@@ -121,9 +121,33 @@ def show_data():
 (Hacer dos funciones, una para la carga de productos y otra para mostrarlos)
 
 '''
+def validate_float(message:str,message_bug:str,min:float, max:float):
+    price = input(message)
+    while float(price) < min or float(price) > max:
+        price = input(message_bug)
+    price = float(price)
+    return price
 
 
+def load_products():
+    new_array = []
+    for i in range(0,5,1):
+        sub_array = []
+        product = validate_string('Enter the name of product: ', 'Enter correctly the name of product: ')
+        price = validate_float('Enter the price of product: ', 'Enter correctly the price of product', 0, 99999)
+        sub_array.append(product)
+        sub_array.append(price)
+        new_array.append(sub_array)
+    return new_array
 
+def show_products_over_first_product():
+    array = load_products()
+    first_price_product = array[0][1]
+    number_products = 0
+    for i in range(i+1,len(array)):
+        if array[i][1] > first_price_product:
+            number_products += 1
+    return number_products
 
 '''
 7. La utn fra necesita un sistema saber la nota promedio más alta entre 5 alumnos de la Materia Programación I. 
@@ -138,3 +162,41 @@ Nota segundo parcial (Número aleatorio entre 1 y 10)
 Aparte de saber cuál fue esa nota debemos mostrar cuál fue el alumno, en caso de haber más de un alumno con la misma nota promedio mostrar a los dos.
 
 '''
+def registration():
+    new_array = []
+    for i in range(0,5,1):
+        sub_array = []
+        name = validate_string('Enter the name:', 'Enter correctly name: ')
+        last_name = validate_string('Enter the last name ', 'Enter correctly last name: ')
+        legacy = validate_float('Enter legacy: ', 'Enter correctly legacy', 0, 99999)
+        first_exam = validate_integer('Enter first exam: ', 'Enter correctly first exam', 0, 10)
+        second_exam = validate_integer('Enter second exam: ', 'Enter correctly second exam', 0, 10)
+        average_student = (first_exam + second_exam) / 2
+        sub_array.append(name)
+        sub_array.append(last_name)
+        sub_array.append(legacy)
+        sub_array.append(first_exam)
+        sub_array.append(second_exam)
+        sub_array.append(average_student)
+        new_array.append(sub_array)
+    return new_array
+
+def show_highest_average():
+    students = registration()
+    max_average = students[0][5]
+    highest_average = []
+    for i in range(len(students)):
+        if students[i][5] > max_average:
+           max_average = students[i][5]
+    
+    for i in range(len(students)):
+        sub_array = []
+        if max_average == students[i][5]:
+            sub_array.append(students[i][0])
+            sub_array.append(students[i][1])
+            sub_array.append(students[i][5])
+            highest_average.append(sub_array)
+    
+    return highest_average
+
+print(show_highest_average())
