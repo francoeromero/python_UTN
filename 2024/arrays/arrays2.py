@@ -1,3 +1,4 @@
+
 '''
 1. Escribir una función que reciba como parámetro una lista de str y cuente la cantidad de elementos con más de cinco caracteres.
 Para contar los caracteres de un string también se usa la función len
