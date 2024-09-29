@@ -11,3 +11,6 @@ while flag == False:
             flag = False
 
 print(array)
+
+
+
