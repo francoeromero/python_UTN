@@ -189,7 +189,7 @@ def mayor_nota(matriz:list)->list:
 '''
 12. 
 '''
-def alumnos_mayor_nota_promedio(matriz:list):
+def alumnos_mayor_nota_promedio(matriz:list)->list:
     nota_promedio = promedio_alumnos(matriz)
     nueva_matriz = []
     for fil in range(len(matriz)):
