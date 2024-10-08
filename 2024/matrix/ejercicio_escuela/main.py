@@ -31,7 +31,7 @@ Debemos cargar todo de manera algorítmica sin usar append inicializando anterio
 11.Mostrar el alumno o los alumnos con mayor nota
 12.Mostrar la cantidad de alumnos que superan la nota promedio
 13.Salir
-s
+
 NOTA 1: No se puede acceder de la opción 2 a la 12 si nunca se ingresó la opción 1.
 NOTA 2: Modularizar cada tarea en funciones, recordar hacerlas lo más genéricas posibles.
 
@@ -55,6 +55,7 @@ while True:
     print('4. Buscar alumno por DNI')
     print('5. Salir')
     # print('\n REGISTRO DE ALUMNOS UTN \n1. Registrar alumnos\n2. Mostrar alumnos registrados\n3. Cantidad de alumnos promocionados\n4. Cantidad de alumnos aprobados\n5. Cantidad de alumnos desaprobados\n6. Buscar alumno por DNI\n7. Cantidad de alumnos promocionados, aprobados y desaprobados\n.8 El promedio de nota de todos los alumnos\n.9 El promedio de nota de todos los alumnos masculinos\n.10. El porcentaje de alumnos de cada genero\n11. Mostrar el alumno o alumnos con mayor nota\n12. Mostrar la cantidad de alumnos que superan la nota promedio\n13.Salir')
+    
     opcion = int(input('Ingrese una opcion: '))
     # while not opcion.isdigit() or int(opcion) < 1 or int(opcion) > 13:
     #     opcion = input('Ingrese correctamente, del 1 al 13: ')
@@ -91,8 +92,9 @@ while True:
                 print(f'12. Alumnos que superaron la nota promedio: {mayores_nota_promedio}')
                 
         case 4:
-            alumno_dni = verificar_alumno_dni(matriz_alumnos)
-            print(f'6. alumno por dni: {alumno_dni}')
+            if verificar_existencia(matriz_alumnos,'\n\n No hay registro de alumnos'):
+                alumno_dni = verificar_alumno_dni(matriz_alumnos)
+                print(f'6. alumno por dni: {alumno_dni}')
         case 5:
             print('saliendo del sistema')
             break
