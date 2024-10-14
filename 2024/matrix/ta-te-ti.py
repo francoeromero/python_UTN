@@ -82,10 +82,10 @@ def verificar_ganador(matriz:list,simbolo)->bool:
         return True
     elif simbolo == matriz[0][2] and simbolo == matriz[1][2] and simbolo == matriz[2][2]:
         return True
-    # elif simbolo == matriz[0][0] and simbolo == matriz[1][1] and simbolo[2][2]:
-    #     return True
-    # elif simbolo == matriz[0][2] and simbolo == matriz[1][1] and simbolo[2][0]:
-    #     return True
+    elif simbolo == matriz[0][0] and simbolo == matriz[1][1] and simbolo[2][2]:
+        return True
+    elif simbolo == matriz[0][2] and simbolo == matriz[1][1] and simbolo[2][0]:
+        return True
     
 def ta_te_ti():
     # iniciamos la matriz
